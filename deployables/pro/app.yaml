@@ -1,0 +1,18 @@
+runtime: python311
+
+env_variables:
+
+  APP_PROPERTIES_PATHS: resources
+  BBVA_ENV: pro
+
+handlers:
+
+- url: /(.*\.(html|js|css|svg|json|png|jpg|gif|map|woff|ttf|ico))$
+  static_files: public/\1
+  upload: public/.*\.(html|js|css|svg|json|png|jpg|gif|map|woff|ttf|ico)
+  secure: always
+  login: required
+
+- url: /.*
+  script: auto
+  secure: always

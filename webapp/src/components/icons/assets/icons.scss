@@ -1,0 +1,2319 @@
+@charset "UTF-8";
+@import "./variables.scss";
+
+$bbva-icons: "bbva-icons";
+
+.icon {
+  display: inline-block;
+  overflow: hidden;
+  text-indent: -9999px;
+  background: none;
+  border: none;
+}
+
+.icon:before {
+  float: left; //font-size: 18px;
+  //line-height: 16px;
+  margin: 0;
+  text-indent: 0;
+}
+
+@font-face {
+    font-family: $bbva-icons;
+    src: url("#{$bbva-icon-font-path}/bbva-icons.eot?d31b8caa99c5de2c8f767fef43364c27?#iefix") format("embedded-opentype"),
+url("#{$bbva-icon-font-path}/bbva-icons.woff2?d31b8caa99c5de2c8f767fef43364c27") format("woff2"),
+url("#{$bbva-icon-font-path}/bbva-icons.woff?d31b8caa99c5de2c8f767fef43364c27") format("woff"),
+url("#{$bbva-icon-font-path}/bbva-icons.ttf?d31b8caa99c5de2c8f767fef43364c27") format("truetype"),
+url("#{$bbva-icon-font-path}/bbva-icons.svg?d31b8caa99c5de2c8f767fef43364c27#bbva-icons") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+[data-icon]:before {
+  font-family: $bbva-icons !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="ui-"]:before, 
+[class*=" ui-"]:before {
+    font-family: $bbva-icons !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.ui-360-mobile-view:before {
+    content: $ui-360-mobile-view;
+}
+
+.ui-accesible-toilet:before {
+    content: $ui-accesible-toilet;
+}
+
+.ui-accessibility:before {
+    content: $ui-accessibility;
+}
+
+.ui-account:before {
+    content: $ui-account;
+}
+
+.ui-add-notes:before {
+    content: $ui-add-notes;
+}
+
+.ui-add-to-cart:before {
+    content: $ui-add-to-cart;
+}
+
+.ui-add:before {
+    content: $ui-add;
+}
+
+.ui-address-book:before {
+    content: $ui-address-book;
+}
+
+.ui-advance:before {
+    content: $ui-advance;
+}
+
+.ui-aeroplane:before {
+    content: $ui-aeroplane;
+}
+
+.ui-aerothermal-unit:before {
+    content: $ui-aerothermal-unit;
+}
+
+.ui-alarm:before {
+    content: $ui-alarm;
+}
+
+.ui-alphabetical-order:before {
+    content: $ui-alphabetical-order;
+}
+
+.ui-angry:before {
+    content: $ui-angry;
+}
+
+.ui-app-store:before {
+    content: $ui-app-store;
+}
+
+.ui-archive-mail:before {
+    content: $ui-archive-mail;
+}
+
+.ui-arrows:before {
+    content: $ui-arrows;
+}
+
+.ui-atm:before {
+    content: $ui-atm;
+}
+
+.ui-attached:before {
+    content: $ui-attached;
+}
+
+.ui-audio:before {
+    content: $ui-audio;
+}
+
+.ui-auto-bank:before {
+    content: $ui-auto-bank;
+}
+
+.ui-auto:before {
+    content: $ui-auto;
+}
+
+.ui-automate:before {
+    content: $ui-automate;
+}
+
+.ui-automatic-access:before {
+    content: $ui-automatic-access;
+}
+
+.ui-baby-cart:before {
+    content: $ui-baby-cart;
+}
+
+.ui-baby:before {
+    content: $ui-baby;
+}
+
+.ui-back-mini:before {
+    content: $ui-back-mini;
+}
+
+.ui-back:before {
+    content: $ui-back;
+}
+
+.ui-bakery:before {
+    content: $ui-bakery;
+}
+
+.ui-balance-dollar:before {
+    content: $ui-balance-dollar;
+}
+
+.ui-balance-euro:before {
+    content: $ui-balance-euro;
+}
+
+.ui-balcony:before {
+    content: $ui-balcony;
+}
+
+.ui-bank:before {
+    content: $ui-bank;
+}
+
+.ui-bar:before {
+    content: $ui-bar;
+}
+
+.ui-barcode:before {
+    content: $ui-barcode;
+}
+
+.ui-bath:before {
+    content: $ui-bath;
+}
+
+.ui-bbva-contigo:before {
+    content: $ui-bbva-contigo;
+}
+
+.ui-bbva-experience:before {
+    content: $ui-bbva-experience;
+}
+
+.ui-bbva-go:before {
+    content: $ui-bbva-go;
+}
+
+.ui-bbva-valora-view:before {
+    content: $ui-bbva-valora-view;
+}
+
+.ui-bbva-valora:before {
+    content: $ui-bbva-valora;
+}
+
+.ui-bconomy:before {
+    content: $ui-bconomy;
+}
+
+.ui-bed:before {
+    content: $ui-bed;
+}
+
+.ui-behance-simple:before {
+    content: $ui-behance-simple;
+}
+
+.ui-behance:before {
+    content: $ui-behance;
+}
+
+.ui-behavioural-economics:before {
+    content: $ui-behavioural-economics;
+}
+
+.ui-bicycle:before {
+    content: $ui-bicycle;
+}
+
+.ui-big-glass:before {
+    content: $ui-big-glass;
+}
+
+.ui-biometric:before {
+    content: $ui-biometric;
+}
+
+.ui-bizum:before {
+    content: $ui-bizum;
+}
+
+.ui-blind-app:before {
+    content: $ui-blind-app;
+}
+
+.ui-block-card:before {
+    content: $ui-block-card;
+}
+
+.ui-block:before {
+    content: $ui-block;
+}
+
+.ui-blog:before {
+    content: $ui-blog;
+}
+
+.ui-bluetooth:before {
+    content: $ui-bluetooth;
+}
+
+.ui-boiler:before {
+    content: $ui-boiler;
+}
+
+.ui-bonus-account:before {
+    content: $ui-bonus-account;
+}
+
+.ui-bookstore:before {
+    content: $ui-bookstore;
+}
+
+.ui-branch:before {
+    content: $ui-branch;
+}
+
+.ui-building:before {
+    content: $ui-building;
+}
+
+.ui-built-land:before {
+    content: $ui-built-land;
+}
+
+.ui-bulb:before {
+    content: $ui-bulb;
+}
+
+.ui-bullet:before {
+    content: $ui-bullet;
+}
+
+.ui-bullet1:before {
+    content: $ui-bullet1;
+}
+
+.ui-burning-car:before {
+    content: $ui-burning-car;
+}
+
+.ui-bus:before {
+    content: $ui-bus;
+}
+
+.ui-business-inteligent:before {
+    content: $ui-business-inteligent;
+}
+
+.ui-butcher-shop:before {
+    content: $ui-butcher-shop;
+}
+
+.ui-buy-stock:before {
+    content: $ui-buy-stock;
+}
+
+.ui-calculator:before {
+    content: $ui-calculator;
+}
+
+.ui-calendar:before {
+    content: $ui-calendar;
+}
+
+.ui-camera:before {
+    content: $ui-camera;
+}
+
+.ui-campus:before {
+    content: $ui-campus;
+}
+
+.ui-car-accident:before {
+    content: $ui-car-accident;
+}
+
+.ui-car-moons:before {
+    content: $ui-car-moons;
+}
+
+.ui-car-plus:before {
+    content: $ui-car-plus;
+}
+
+.ui-car-workshop:before {
+    content: $ui-car-workshop;
+}
+
+.ui-carbon-footprint:before {
+    content: $ui-carbon-footprint;
+}
+
+.ui-card:before {
+    content: $ui-card;
+}
+
+.ui-cart:before {
+    content: $ui-cart;
+}
+
+.ui-cash-register:before {
+    content: $ui-cash-register;
+}
+
+.ui-cash-up:before {
+    content: $ui-cash-up;
+}
+
+.ui-cash:before {
+    content: $ui-cash;
+}
+
+.ui-caution:before {
+    content: $ui-caution;
+}
+
+.ui-change-camera:before {
+    content: $ui-change-camera;
+}
+
+.ui-change-euro:before {
+    content: $ui-change-euro;
+}
+
+.ui-channels:before {
+    content: $ui-channels;
+}
+
+.ui-charge-card:before {
+    content: $ui-charge-card;
+}
+
+.ui-charge-mobile:before {
+    content: $ui-charge-mobile;
+}
+
+.ui-chat:before {
+    content: $ui-chat;
+}
+
+.ui-check:before {
+    content: $ui-check;
+}
+
+.ui-checkmark:before {
+    content: $ui-checkmark;
+}
+
+.ui-children:before {
+    content: $ui-children;
+}
+
+.ui-cinema:before {
+    content: $ui-cinema;
+}
+
+.ui-cleanliness:before {
+    content: $ui-cleanliness;
+}
+
+.ui-climate-action:before {
+    content: $ui-climate-action;
+}
+
+.ui-clock:before {
+    content: $ui-clock;
+}
+
+.ui-close:before {
+    content: $ui-close;
+}
+
+.ui-cloud:before {
+    content: $ui-cloud;
+}
+
+.ui-coffee-shop:before {
+    content: $ui-coffee-shop;
+}
+
+.ui-collapse:before {
+    content: $ui-collapse;
+}
+
+.ui-color:before {
+    content: $ui-color;
+}
+
+.ui-commercial-offer:before {
+    content: $ui-commercial-offer;
+}
+
+.ui-communication:before {
+    content: $ui-communication;
+}
+
+.ui-concrete-mixer:before {
+    content: $ui-concrete-mixer;
+}
+
+.ui-cone:before {
+    content: $ui-cone;
+}
+
+.ui-confectionery:before {
+    content: $ui-confectionery;
+}
+
+.ui-configuration:before {
+    content: $ui-configuration;
+}
+
+.ui-construction-helmet:before {
+    content: $ui-construction-helmet;
+}
+
+.ui-construction-stopped:before {
+    content: $ui-construction-stopped;
+}
+
+.ui-continue-left:before {
+    content: $ui-continue-left;
+}
+
+.ui-continue-right:before {
+    content: $ui-continue-right;
+}
+
+.ui-continue:before {
+    content: $ui-continue;
+}
+
+.ui-copy-credit-card:before {
+    content: $ui-copy-credit-card;
+}
+
+.ui-copy:before {
+    content: $ui-copy;
+}
+
+.ui-correos:before {
+    content: $ui-correos;
+}
+
+.ui-couple:before {
+    content: $ui-couple;
+}
+
+.ui-crane:before {
+    content: $ui-crane;
+}
+
+.ui-crossway:before {
+    content: $ui-crossway;
+}
+
+.ui-csv:before {
+    content: $ui-csv;
+}
+
+.ui-culture-and-talent:before {
+    content: $ui-culture-and-talent;
+}
+
+.ui-currency-exchange:before {
+    content: $ui-currency-exchange;
+}
+
+.ui-decease:before {
+    content: $ui-decease;
+}
+
+.ui-delete:before {
+    content: $ui-delete;
+}
+
+.ui-delivery:before {
+    content: $ui-delivery;
+}
+
+.ui-deposit:before {
+    content: $ui-deposit;
+}
+
+.ui-desktop:before {
+    content: $ui-desktop;
+}
+
+.ui-diaper:before {
+    content: $ui-diaper;
+}
+
+.ui-digital-card:before {
+    content: $ui-digital-card;
+}
+
+.ui-digital-handwriting:before {
+    content: $ui-digital-handwriting;
+}
+
+.ui-digital-press:before {
+    content: $ui-digital-press;
+}
+
+.ui-digital-signature:before {
+    content: $ui-digital-signature;
+}
+
+.ui-digital-tv:before {
+    content: $ui-digital-tv;
+}
+
+.ui-dimo-simple:before {
+    content: $ui-dimo-simple;
+}
+
+.ui-dimo:before {
+    content: $ui-dimo;
+}
+
+.ui-directory:before {
+    content: $ui-directory;
+}
+
+.ui-disabled-card:before {
+    content: $ui-disabled-card;
+}
+
+.ui-discharge-card:before {
+    content: $ui-discharge-card;
+}
+
+.ui-discount:before {
+    content: $ui-discount;
+}
+
+.ui-dislike:before {
+    content: $ui-dislike;
+}
+
+.ui-divider:before {
+    content: $ui-divider;
+}
+
+.ui-dna:before {
+    content: $ui-dna;
+}
+
+.ui-document:before {
+    content: $ui-document;
+}
+
+.ui-dollar-taxes:before {
+    content: $ui-dollar-taxes;
+}
+
+.ui-dollar:before {
+    content: $ui-dollar;
+}
+
+.ui-donations:before {
+    content: $ui-donations;
+}
+
+.ui-down-arrow:before {
+    content: $ui-down-arrow;
+}
+
+.ui-down-cloud:before {
+    content: $ui-down-cloud;
+}
+
+.ui-down:before {
+    content: $ui-down;
+}
+
+.ui-download:before {
+    content: $ui-download;
+}
+
+.ui-drag:before {
+    content: $ui-drag;
+}
+
+.ui-dribble-simple:before {
+    content: $ui-dribble-simple;
+}
+
+.ui-dribble:before {
+    content: $ui-dribble;
+}
+
+.ui-echeck:before {
+    content: $ui-echeck;
+}
+
+.ui-edit-profile:before {
+    content: $ui-edit-profile;
+}
+
+.ui-edit-ticket:before {
+    content: $ui-edit-ticket;
+}
+
+.ui-edit:before {
+    content: $ui-edit;
+}
+
+.ui-education:before {
+    content: $ui-education;
+}
+
+.ui-elevator:before {
+    content: $ui-elevator;
+}
+
+.ui-email-read:before {
+    content: $ui-email-read;
+}
+
+.ui-email:before {
+    content: $ui-email;
+}
+
+.ui-emergency:before {
+    content: $ui-emergency;
+}
+
+.ui-empty-card:before {
+    content: $ui-empty-card;
+}
+
+.ui-end-call:before {
+    content: $ui-end-call;
+}
+
+.ui-end:before {
+    content: $ui-end;
+}
+
+.ui-entertainment:before {
+    content: $ui-entertainment;
+}
+
+.ui-euro:before {
+    content: $ui-euro;
+}
+
+.ui-excel:before {
+    content: $ui-excel;
+}
+
+.ui-executive:before {
+    content: $ui-executive;
+}
+
+.ui-expand:before {
+    content: $ui-expand;
+}
+
+.ui-exploration:before {
+    content: $ui-exploration;
+}
+
+.ui-express-account:before {
+    content: $ui-express-account;
+}
+
+.ui-extinguisher:before {
+    content: $ui-extinguisher;
+}
+
+.ui-face-id:before {
+    content: $ui-face-id;
+}
+
+.ui-facebook-messenger:before {
+    content: $ui-facebook-messenger;
+}
+
+.ui-facebook-simple:before {
+    content: $ui-facebook-simple;
+}
+
+.ui-facebook:before {
+    content: $ui-facebook;
+}
+
+.ui-fast-food:before {
+    content: $ui-fast-food;
+}
+
+.ui-favorite:before {
+    content: $ui-favorite;
+}
+
+.ui-feedback:before {
+    content: $ui-feedback;
+}
+
+.ui-female:before {
+    content: $ui-female;
+}
+
+.ui-filter:before {
+    content: $ui-filter;
+}
+
+.ui-financial-health:before {
+    content: $ui-financial-health;
+}
+
+.ui-fingerprint:before {
+    content: $ui-fingerprint;
+}
+
+.ui-fire-extinguisher:before {
+    content: $ui-fire-extinguisher;
+}
+
+.ui-first:before {
+    content: $ui-first;
+}
+
+.ui-fixed:before {
+    content: $ui-fixed;
+}
+
+.ui-flickr-simple:before {
+    content: $ui-flickr-simple;
+}
+
+.ui-flickr:before {
+    content: $ui-flickr;
+}
+
+.ui-florist:before {
+    content: $ui-florist;
+}
+
+.ui-fold:before {
+    content: $ui-fold;
+}
+
+.ui-folder:before {
+    content: $ui-folder;
+}
+
+.ui-football:before {
+    content: $ui-football;
+}
+
+.ui-forbidden-to-pass-in-front-bus:before {
+    content: $ui-forbidden-to-pass-in-front-bus;
+}
+
+.ui-forest:before {
+    content: $ui-forest;
+}
+
+.ui-france-go:before {
+    content: $ui-france-go;
+}
+
+.ui-free-dollar:before {
+    content: $ui-free-dollar;
+}
+
+.ui-free-euro:before {
+    content: $ui-free-euro;
+}
+
+.ui-frequency:before {
+    content: $ui-frequency;
+}
+
+.ui-frozen:before {
+    content: $ui-frozen;
+}
+
+.ui-funtional-square:before {
+    content: $ui-funtional-square;
+}
+
+.ui-furniture:before {
+    content: $ui-furniture;
+}
+
+.ui-generic-sustainability:before {
+    content: $ui-generic-sustainability;
+}
+
+.ui-get-in:before {
+    content: $ui-get-in;
+}
+
+.ui-get-out:before {
+    content: $ui-get-out;
+}
+
+.ui-gif:before {
+    content: $ui-gif;
+}
+
+.ui-glass-with-ice:before {
+    content: $ui-glass-with-ice;
+}
+
+.ui-glassdoor:before {
+    content: $ui-glassdoor;
+}
+
+.ui-globe:before {
+    content: $ui-globe;
+}
+
+.ui-google-drive:before {
+    content: $ui-google-drive;
+}
+
+.ui-google-hangouts:before {
+    content: $ui-google-hangouts;
+}
+
+.ui-google-plus-simple:before {
+    content: $ui-google-plus-simple;
+}
+
+.ui-google-plus:before {
+    content: $ui-google-plus;
+}
+
+.ui-graphics:before {
+    content: $ui-graphics;
+}
+
+.ui-guarantee:before {
+    content: $ui-guarantee;
+}
+
+.ui-hand-gesture:before {
+    content: $ui-hand-gesture;
+}
+
+.ui-happy:before {
+    content: $ui-happy;
+}
+
+.ui-hashtag:before {
+    content: $ui-hashtag;
+}
+
+.ui-health:before {
+    content: $ui-health;
+}
+
+.ui-helmet-bike:before {
+    content: $ui-helmet-bike;
+}
+
+.ui-help:before {
+    content: $ui-help;
+}
+
+.ui-hide:before {
+    content: $ui-hide;
+}
+
+.ui-historical-transfer:before {
+    content: $ui-historical-transfer;
+}
+
+.ui-history:before {
+    content: $ui-history;
+}
+
+.ui-hold:before {
+    content: $ui-hold;
+}
+
+.ui-holidays:before {
+    content: $ui-holidays;
+}
+
+.ui-home:before {
+    content: $ui-home;
+}
+
+.ui-hot:before {
+    content: $ui-hot;
+}
+
+.ui-hotel:before {
+    content: $ui-hotel;
+}
+
+.ui-hpd:before {
+    content: $ui-hpd;
+}
+
+.ui-huawei-app-gallery:before {
+    content: $ui-huawei-app-gallery;
+}
+
+.ui-ice-cream:before {
+    content: $ui-ice-cream;
+}
+
+.ui-id-card:before {
+    content: $ui-id-card;
+}
+
+.ui-identified-call:before {
+    content: $ui-identified-call;
+}
+
+.ui-illustration:before {
+    content: $ui-illustration;
+}
+
+.ui-images-off:before {
+    content: $ui-images-off;
+}
+
+.ui-images:before {
+    content: $ui-images;
+}
+
+.ui-inclusive-growth:before {
+    content: $ui-inclusive-growth;
+}
+
+.ui-incoming-call:before {
+    content: $ui-incoming-call;
+}
+
+.ui-info:before {
+    content: $ui-info;
+}
+
+.ui-instagram-simple:before {
+    content: $ui-instagram-simple;
+}
+
+.ui-instagram:before {
+    content: $ui-instagram;
+}
+
+.ui-insurance:before {
+    content: $ui-insurance;
+}
+
+.ui-international:before {
+    content: $ui-international;
+}
+
+.ui-investment:before {
+    content: $ui-investment;
+}
+
+.ui-jewelry:before {
+    content: $ui-jewelry;
+}
+
+.ui-jpg:before {
+    content: $ui-jpg;
+}
+
+.ui-keyboard:before {
+    content: $ui-keyboard;
+}
+
+.ui-kitchen:before {
+    content: $ui-kitchen;
+}
+
+.ui-land:before {
+    content: $ui-land;
+}
+
+.ui-language:before {
+    content: $ui-language;
+}
+
+.ui-law:before {
+    content: $ui-law;
+}
+
+.ui-leaf:before {
+    content: $ui-leaf;
+}
+
+.ui-left-arrow:before {
+    content: $ui-left-arrow;
+}
+
+.ui-letter-a:before {
+    content: $ui-letter-a;
+}
+
+.ui-letter-b:before {
+    content: $ui-letter-b;
+}
+
+.ui-letter-c:before {
+    content: $ui-letter-c;
+}
+
+.ui-letter-d:before {
+    content: $ui-letter-d;
+}
+
+.ui-letter-e:before {
+    content: $ui-letter-e;
+}
+
+.ui-letter-f:before {
+    content: $ui-letter-f;
+}
+
+.ui-letter-g:before {
+    content: $ui-letter-g;
+}
+
+.ui-letter-h:before {
+    content: $ui-letter-h;
+}
+
+.ui-letter-i:before {
+    content: $ui-letter-i;
+}
+
+.ui-letter-j:before {
+    content: $ui-letter-j;
+}
+
+.ui-letter-k:before {
+    content: $ui-letter-k;
+}
+
+.ui-letter-l:before {
+    content: $ui-letter-l;
+}
+
+.ui-letter-m:before {
+    content: $ui-letter-m;
+}
+
+.ui-letter-n:before {
+    content: $ui-letter-n;
+}
+
+.ui-letter-nn:before {
+    content: $ui-letter-nn;
+}
+
+.ui-letter-o:before {
+    content: $ui-letter-o;
+}
+
+.ui-letter-p:before {
+    content: $ui-letter-p;
+}
+
+.ui-letter-q:before {
+    content: $ui-letter-q;
+}
+
+.ui-letter-r:before {
+    content: $ui-letter-r;
+}
+
+.ui-letter-s:before {
+    content: $ui-letter-s;
+}
+
+.ui-letter-t:before {
+    content: $ui-letter-t;
+}
+
+.ui-letter-u:before {
+    content: $ui-letter-u;
+}
+
+.ui-letter-v:before {
+    content: $ui-letter-v;
+}
+
+.ui-letter-w:before {
+    content: $ui-letter-w;
+}
+
+.ui-letter-x:before {
+    content: $ui-letter-x;
+}
+
+.ui-letter-y:before {
+    content: $ui-letter-y;
+}
+
+.ui-letter-z:before {
+    content: $ui-letter-z;
+}
+
+.ui-lighthouse:before {
+    content: $ui-lighthouse;
+}
+
+.ui-like:before {
+    content: $ui-like;
+}
+
+.ui-limits:before {
+    content: $ui-limits;
+}
+
+.ui-link:before {
+    content: $ui-link;
+}
+
+.ui-linkedin-simple:before {
+    content: $ui-linkedin-simple;
+}
+
+.ui-linkedin:before {
+    content: $ui-linkedin;
+}
+
+.ui-list-view:before {
+    content: $ui-list-view;
+}
+
+.ui-living-room:before {
+    content: $ui-living-room;
+}
+
+.ui-loan-dollar:before {
+    content: $ui-loan-dollar;
+}
+
+.ui-loan-euro:before {
+    content: $ui-loan-euro;
+}
+
+.ui-lock:before {
+    content: $ui-lock;
+}
+
+.ui-look-up:before {
+    content: $ui-look-up;
+}
+
+.ui-lost-call:before {
+    content: $ui-lost-call;
+}
+
+.ui-male:before {
+    content: $ui-male;
+}
+
+.ui-man:before {
+    content: $ui-man;
+}
+
+.ui-map:before {
+    content: $ui-map;
+}
+
+.ui-max-min-screen:before {
+    content: $ui-max-min-screen;
+}
+
+.ui-medical-kit:before {
+    content: $ui-medical-kit;
+}
+
+.ui-menu:before {
+    content: $ui-menu;
+}
+
+.ui-merge:before {
+    content: $ui-merge;
+}
+
+.ui-mi-espacio:before {
+    content: $ui-mi-espacio;
+}
+
+.ui-microphone-off:before {
+    content: $ui-microphone-off;
+}
+
+.ui-microphone:before {
+    content: $ui-microphone;
+}
+
+.ui-milk:before {
+    content: $ui-milk;
+}
+
+.ui-missed-call:before {
+    content: $ui-missed-call;
+}
+
+.ui-mix-cloud-simple:before {
+    content: $ui-mix-cloud-simple;
+}
+
+.ui-mix-cloud:before {
+    content: $ui-mix-cloud;
+}
+
+.ui-mixed:before {
+    content: $ui-mixed;
+}
+
+.ui-mobile-cash-dollar:before {
+    content: $ui-mobile-cash-dollar;
+}
+
+.ui-mobile-cash-euro:before {
+    content: $ui-mobile-cash-euro;
+}
+
+.ui-mobile-off:before {
+    content: $ui-mobile-off;
+}
+
+.ui-mobile-payment:before {
+    content: $ui-mobile-payment;
+}
+
+.ui-mobile-print:before {
+    content: $ui-mobile-print;
+}
+
+.ui-mobile:before {
+    content: $ui-mobile;
+}
+
+.ui-modo:before {
+    content: $ui-modo;
+}
+
+.ui-moon:before {
+    content: $ui-moon;
+}
+
+.ui-more:before {
+    content: $ui-more;
+}
+
+.ui-motorcycle-garage:before {
+    content: $ui-motorcycle-garage;
+}
+
+.ui-motorcycle:before {
+    content: $ui-motorcycle;
+}
+
+.ui-multicategory:before {
+    content: $ui-multicategory;
+}
+
+.ui-multiple-bizum:before {
+    content: $ui-multiple-bizum;
+}
+
+.ui-my-expenses:before {
+    content: $ui-my-expenses;
+}
+
+.ui-my-location:before {
+    content: $ui-my-location;
+}
+
+.ui-my-profile:before {
+    content: $ui-my-profile;
+}
+
+.ui-my-projects:before {
+    content: $ui-my-projects;
+}
+
+.ui-near-me:before {
+    content: $ui-near-me;
+}
+
+.ui-net-cash:before {
+    content: $ui-net-cash;
+}
+
+.ui-new-client:before {
+    content: $ui-new-client;
+}
+
+.ui-next-mini:before {
+    content: $ui-next-mini;
+}
+
+.ui-next:before {
+    content: $ui-next;
+}
+
+.ui-nfc-disconnect:before {
+    content: $ui-nfc-disconnect;
+}
+
+.ui-nfc:before {
+    content: $ui-nfc;
+}
+
+.ui-no-audio:before {
+    content: $ui-no-audio;
+}
+
+.ui-no-client:before {
+    content: $ui-no-client;
+}
+
+.ui-no-draw:before {
+    content: $ui-no-draw;
+}
+
+.ui-no-interest:before {
+    content: $ui-no-interest;
+}
+
+.ui-no-smoking:before {
+    content: $ui-no-smoking;
+}
+
+.ui-nursery-room:before {
+    content: $ui-nursery-room;
+}
+
+.ui-occupationally-active:before {
+    content: $ui-occupationally-active;
+}
+
+.ui-official-rates:before {
+    content: $ui-official-rates;
+}
+
+.ui-on-off:before {
+    content: $ui-on-off;
+}
+
+.ui-one-click:before {
+    content: $ui-one-click;
+}
+
+.ui-open-book:before {
+    content: $ui-open-book;
+}
+
+.ui-open-outside:before {
+    content: $ui-open-outside;
+}
+
+.ui-openpay:before {
+    content: $ui-openpay;
+}
+
+.ui-order:before {
+    content: $ui-order;
+}
+
+.ui-organization:before {
+    content: $ui-organization;
+}
+
+.ui-outgoing-call:before {
+    content: $ui-outgoing-call;
+}
+
+.ui-pacifier:before {
+    content: $ui-pacifier;
+}
+
+.ui-paddle:before {
+    content: $ui-paddle;
+}
+
+.ui-partner:before {
+    content: $ui-partner;
+}
+
+.ui-passport:before {
+    content: $ui-passport;
+}
+
+.ui-pasta-factory:before {
+    content: $ui-pasta-factory;
+}
+
+.ui-pause-mini:before {
+    content: $ui-pause-mini;
+}
+
+.ui-pause-simple:before {
+    content: $ui-pause-simple;
+}
+
+.ui-pause:before {
+    content: $ui-pause;
+}
+
+.ui-pay-sheet-dollar:before {
+    content: $ui-pay-sheet-dollar;
+}
+
+.ui-pay-sheet:before {
+    content: $ui-pay-sheet;
+}
+
+.ui-pdf:before {
+    content: $ui-pdf;
+}
+
+.ui-periodical-transfer:before {
+    content: $ui-periodical-transfer;
+}
+
+.ui-pet-shop:before {
+    content: $ui-pet-shop;
+}
+
+.ui-phishing:before {
+    content: $ui-phishing;
+}
+
+.ui-phone-banned:before {
+    content: $ui-phone-banned;
+}
+
+.ui-photo-login:before {
+    content: $ui-photo-login;
+}
+
+.ui-physiotherapy:before {
+    content: $ui-physiotherapy;
+}
+
+.ui-pic:before {
+    content: $ui-pic;
+}
+
+.ui-pie-chart:before {
+    content: $ui-pie-chart;
+}
+
+.ui-pill:before {
+    content: $ui-pill;
+}
+
+.ui-pin-pad-connect:before {
+    content: $ui-pin-pad-connect;
+}
+
+.ui-pin-pad-disconnected:before {
+    content: $ui-pin-pad-disconnected;
+}
+
+.ui-pin:before {
+    content: $ui-pin;
+}
+
+.ui-pinterest-simple:before {
+    content: $ui-pinterest-simple;
+}
+
+.ui-pinterest:before {
+    content: $ui-pinterest;
+}
+
+.ui-place:before {
+    content: $ui-place;
+}
+
+.ui-play-mini:before {
+    content: $ui-play-mini;
+}
+
+.ui-play-simple:before {
+    content: $ui-play-simple;
+}
+
+.ui-play-store:before {
+    content: $ui-play-store;
+}
+
+.ui-play:before {
+    content: $ui-play;
+}
+
+.ui-plin-icon:before {
+    content: $ui-plin-icon;
+}
+
+.ui-plin-simple:before {
+    content: $ui-plin-simple;
+}
+
+.ui-pocket:before {
+    content: $ui-pocket;
+}
+
+.ui-point:before {
+    content: $ui-point;
+}
+
+.ui-portfolio:before {
+    content: $ui-portfolio;
+}
+
+.ui-post-mail:before {
+    content: $ui-post-mail;
+}
+
+.ui-pound-sterling:before {
+    content: $ui-pound-sterling;
+}
+
+.ui-power-car:before {
+    content: $ui-power-car;
+}
+
+.ui-presentation:before {
+    content: $ui-presentation;
+}
+
+.ui-press:before {
+    content: $ui-press;
+}
+
+.ui-previous-appointment:before {
+    content: $ui-previous-appointment;
+}
+
+.ui-print:before {
+    content: $ui-print;
+}
+
+.ui-privacy-and-data:before {
+    content: $ui-privacy-and-data;
+}
+
+.ui-prohibited-alcohol:before {
+    content: $ui-prohibited-alcohol;
+}
+
+.ui-prohibited-headphones:before {
+    content: $ui-prohibited-headphones;
+}
+
+.ui-prohibited-zigzag:before {
+    content: $ui-prohibited-zigzag;
+}
+
+.ui-promotion:before {
+    content: $ui-promotion;
+}
+
+.ui-puntos-y-promociones:before {
+    content: $ui-puntos-y-promociones;
+}
+
+.ui-puntos:before {
+    content: $ui-puntos;
+}
+
+.ui-qr:before {
+    content: $ui-qr;
+}
+
+.ui-quality-funds:before {
+    content: $ui-quality-funds;
+}
+
+.ui-quizz:before {
+    content: $ui-quizz;
+}
+
+.ui-quotes:before {
+    content: $ui-quotes;
+}
+
+.ui-radiator:before {
+    content: $ui-radiator;
+}
+
+.ui-radio:before {
+    content: $ui-radio;
+}
+
+.ui-ray:before {
+    content: $ui-ray;
+}
+
+.ui-receipt-euro:before {
+    content: $ui-receipt-euro;
+}
+
+.ui-receipt-ko:before {
+    content: $ui-receipt-ko;
+}
+
+.ui-receipt-ok:before {
+    content: $ui-receipt-ok;
+}
+
+.ui-receipt:before {
+    content: $ui-receipt;
+}
+
+.ui-receive-money-dollar:before {
+    content: $ui-receive-money-dollar;
+}
+
+.ui-receive-money-euro:before {
+    content: $ui-receive-money-euro;
+}
+
+.ui-recognition-eye:before {
+    content: $ui-recognition-eye;
+}
+
+.ui-recycle:before {
+    content: $ui-recycle;
+}
+
+.ui-rent:before {
+    content: $ui-rent;
+}
+
+.ui-reply:before {
+    content: $ui-reply;
+}
+
+.ui-reporting:before {
+    content: $ui-reporting;
+}
+
+.ui-rescue:before {
+    content: $ui-rescue;
+}
+
+.ui-restaurant:before {
+    content: $ui-restaurant;
+}
+
+.ui-retail:before {
+    content: $ui-retail;
+}
+
+.ui-retirement:before {
+    content: $ui-retirement;
+}
+
+.ui-return-money:before {
+    content: $ui-return-money;
+}
+
+.ui-return:before {
+    content: $ui-return;
+}
+
+.ui-retweet:before {
+    content: $ui-retweet;
+}
+
+.ui-rewards:before {
+    content: $ui-rewards;
+}
+
+.ui-ric:before {
+    content: $ui-ric;
+}
+
+.ui-right-arrow:before {
+    content: $ui-right-arrow;
+}
+
+.ui-right-location:before {
+    content: $ui-right-location;
+}
+
+.ui-right:before {
+    content: $ui-right;
+}
+
+.ui-risk-culture:before {
+    content: $ui-risk-culture;
+}
+
+.ui-room:before {
+    content: $ui-room;
+}
+
+.ui-rotate-screen:before {
+    content: $ui-rotate-screen;
+}
+
+.ui-sales:before {
+    content: $ui-sales;
+}
+
+.ui-save-for-later:before {
+    content: $ui-save-for-later;
+}
+
+.ui-save-stock:before {
+    content: $ui-save-stock;
+}
+
+.ui-save-up:before {
+    content: $ui-save-up;
+}
+
+.ui-savings:before {
+    content: $ui-savings;
+}
+
+.ui-scam:before {
+    content: $ui-scam;
+}
+
+.ui-school-supplies:before {
+    content: $ui-school-supplies;
+}
+
+.ui-scissors:before {
+    content: $ui-scissors;
+}
+
+.ui-search:before {
+    content: $ui-search;
+}
+
+.ui-searching-location:before {
+    content: $ui-searching-location;
+}
+
+.ui-seatbelt:before {
+    content: $ui-seatbelt;
+}
+
+.ui-security-camera:before {
+    content: $ui-security-camera;
+}
+
+.ui-security-token:before {
+    content: $ui-security-token;
+}
+
+.ui-see-cvv:before {
+    content: $ui-see-cvv;
+}
+
+.ui-segway:before {
+    content: $ui-segway;
+}
+
+.ui-self-assessment:before {
+    content: $ui-self-assessment;
+}
+
+.ui-selfie-and-go:before {
+    content: $ui-selfie-and-go;
+}
+
+.ui-send-money-dollar:before {
+    content: $ui-send-money-dollar;
+}
+
+.ui-send-money-euro:before {
+    content: $ui-send-money-euro;
+}
+
+.ui-send:before {
+    content: $ui-send;
+}
+
+.ui-services:before {
+    content: $ui-services;
+}
+
+.ui-settings:before {
+    content: $ui-settings;
+}
+
+.ui-settlement:before {
+    content: $ui-settlement;
+}
+
+.ui-share:before {
+    content: $ui-share;
+}
+
+.ui-shop:before {
+    content: $ui-shop;
+}
+
+.ui-shopping:before {
+    content: $ui-shopping;
+}
+
+.ui-show:before {
+    content: $ui-show;
+}
+
+.ui-shower:before {
+    content: $ui-shower;
+}
+
+.ui-sign:before {
+    content: $ui-sign;
+}
+
+.ui-simulator:before {
+    content: $ui-simulator;
+}
+
+.ui-sites:before {
+    content: $ui-sites;
+}
+
+.ui-skate:before {
+    content: $ui-skate;
+}
+
+.ui-slideshare-simple:before {
+    content: $ui-slideshare-simple;
+}
+
+.ui-slideshare:before {
+    content: $ui-slideshare;
+}
+
+.ui-small-glass:before {
+    content: $ui-small-glass;
+}
+
+.ui-smart-assistant:before {
+    content: $ui-smart-assistant;
+}
+
+.ui-sms:before {
+    content: $ui-sms;
+}
+
+.ui-snapchat:before {
+    content: $ui-snapchat;
+}
+
+.ui-snow-tires:before {
+    content: $ui-snow-tires;
+}
+
+.ui-solar-panels:before {
+    content: $ui-solar-panels;
+}
+
+.ui-sound-cloud-simple:before {
+    content: $ui-sound-cloud-simple;
+}
+
+.ui-sound-cloud:before {
+    content: $ui-sound-cloud;
+}
+
+.ui-spotify-simple:before {
+    content: $ui-spotify-simple;
+}
+
+.ui-spotify:before {
+    content: $ui-spotify;
+}
+
+.ui-stairs:before {
+    content: $ui-stairs;
+}
+
+.ui-stock:before {
+    content: $ui-stock;
+}
+
+.ui-stop-charge-card:before {
+    content: $ui-stop-charge-card;
+}
+
+.ui-stop:before {
+    content: $ui-stop;
+}
+
+.ui-storage-room:before {
+    content: $ui-storage-room;
+}
+
+.ui-strategy:before {
+    content: $ui-strategy;
+}
+
+.ui-subscription:before {
+    content: $ui-subscription;
+}
+
+.ui-substract:before {
+    content: $ui-substract;
+}
+
+.ui-subway:before {
+    content: $ui-subway;
+}
+
+.ui-sun:before {
+    content: $ui-sun;
+}
+
+.ui-supermarket:before {
+    content: $ui-supermarket;
+}
+
+.ui-support:before {
+    content: $ui-support;
+}
+
+.ui-swimming-pool:before {
+    content: $ui-swimming-pool;
+}
+
+.ui-tablet:before {
+    content: $ui-tablet;
+}
+
+.ui-tasks:before {
+    content: $ui-tasks;
+}
+
+.ui-taxes:before {
+    content: $ui-taxes;
+}
+
+.ui-team:before {
+    content: $ui-team;
+}
+
+.ui-telephone:before {
+    content: $ui-telephone;
+}
+
+.ui-tempered:before {
+    content: $ui-tempered;
+}
+
+.ui-theater:before {
+    content: $ui-theater;
+}
+
+.ui-thumbs-down:before {
+    content: $ui-thumbs-down;
+}
+
+.ui-thumbs-up:before {
+    content: $ui-thumbs-up;
+}
+
+.ui-ticket-bbva-office:before {
+    content: $ui-ticket-bbva-office;
+}
+
+.ui-ticket:before {
+    content: $ui-ticket;
+}
+
+.ui-tiktok-simple:before {
+    content: $ui-tiktok-simple;
+}
+
+.ui-tiktok:before {
+    content: $ui-tiktok;
+}
+
+.ui-tiled-view:before {
+    content: $ui-tiled-view;
+}
+
+.ui-token:before {
+    content: $ui-token;
+}
+
+.ui-tools:before {
+    content: $ui-tools;
+}
+
+.ui-tow-truck:before {
+    content: $ui-tow-truck;
+}
+
+.ui-toys:before {
+    content: $ui-toys;
+}
+
+.ui-tpv:before {
+    content: $ui-tpv;
+}
+
+.ui-traffic-light:before {
+    content: $ui-traffic-light;
+}
+
+.ui-transaction:before {
+    content: $ui-transaction;
+}
+
+.ui-transfer-to-account:before {
+    content: $ui-transfer-to-account;
+}
+
+.ui-transfer-to-card:before {
+    content: $ui-transfer-to-card;
+}
+
+.ui-transfer:before {
+    content: $ui-transfer;
+}
+
+.ui-trash:before {
+    content: $ui-trash;
+}
+
+.ui-travel-expenses:before {
+    content: $ui-travel-expenses;
+}
+
+.ui-travel:before {
+    content: $ui-travel;
+}
+
+.ui-tumblr-simple:before {
+    content: $ui-tumblr-simple;
+}
+
+.ui-tumblr:before {
+    content: $ui-tumblr;
+}
+
+.ui-turn-box:before {
+    content: $ui-turn-box;
+}
+
+.ui-tv:before {
+    content: $ui-tv;
+}
+
+.ui-twitter-simple:before {
+    content: $ui-twitter-simple;
+}
+
+.ui-twitter:before {
+    content: $ui-twitter;
+}
+
+.ui-txt:before {
+    content: $ui-txt;
+}
+
+.ui-unfold:before {
+    content: $ui-unfold;
+}
+
+.ui-unique-key:before {
+    content: $ui-unique-key;
+}
+
+.ui-unlock:before {
+    content: $ui-unlock;
+}
+
+.ui-up-arrow:before {
+    content: $ui-up-arrow;
+}
+
+.ui-up-cloud:before {
+    content: $ui-up-cloud;
+}
+
+.ui-up:before {
+    content: $ui-up;
+}
+
+.ui-update:before {
+    content: $ui-update;
+}
+
+.ui-upload:before {
+    content: $ui-upload;
+}
+
+.ui-usd:before {
+    content: $ui-usd;
+}
+
+.ui-valise:before {
+    content: $ui-valise;
+}
+
+.ui-valora-car:before {
+    content: $ui-valora-car;
+}
+
+.ui-very-hot:before {
+    content: $ui-very-hot;
+}
+
+.ui-video-camera-off:before {
+    content: $ui-video-camera-off;
+}
+
+.ui-video-camera:before {
+    content: $ui-video-camera;
+}
+
+.ui-video-chat:before {
+    content: $ui-video-chat;
+}
+
+.ui-video-game:before {
+    content: $ui-video-game;
+}
+
+.ui-vimeo-simple:before {
+    content: $ui-vimeo-simple;
+}
+
+.ui-vimeo:before {
+    content: $ui-vimeo;
+}
+
+.ui-virtual-card:before {
+    content: $ui-virtual-card;
+}
+
+.ui-virtual-email:before {
+    content: $ui-virtual-email;
+}
+
+.ui-virtual-reality:before {
+    content: $ui-virtual-reality;
+}
+
+.ui-walking-directions:before {
+    content: $ui-walking-directions;
+}
+
+.ui-wallet:before {
+    content: $ui-wallet;
+}
+
+.ui-warning:before {
+    content: $ui-warning;
+}
+
+.ui-washing-machine:before {
+    content: $ui-washing-machine;
+}
+
+.ui-watch:before {
+    content: $ui-watch;
+}
+
+.ui-weather:before {
+    content: $ui-weather;
+}
+
+.ui-wellness:before {
+    content: $ui-wellness;
+}
+
+.ui-whatsapp:before {
+    content: $ui-whatsapp;
+}
+
+.ui-wheel:before {
+    content: $ui-wheel;
+}
+
+.ui-wifi-off:before {
+    content: $ui-wifi-off;
+}
+
+.ui-wifi:before {
+    content: $ui-wifi;
+}
+
+.ui-wiki-metrics:before {
+    content: $ui-wiki-metrics;
+}
+
+.ui-window:before {
+    content: $ui-window;
+}
+
+.ui-woman:before {
+    content: $ui-woman;
+}
+
+.ui-women-shoe:before {
+    content: $ui-women-shoe;
+}
+
+.ui-word:before {
+    content: $ui-word;
+}
+
+.ui-wrong-location:before {
+    content: $ui-wrong-location;
+}
+
+.ui-wrong:before {
+    content: $ui-wrong;
+}
+
+.ui-xml:before {
+    content: $ui-xml;
+}
+
+.ui-yen:before {
+    content: $ui-yen;
+}
+
+.ui-youtube-simple:before {
+    content: $ui-youtube-simple;
+}
+
+.ui-youtube:before {
+    content: $ui-youtube;
+}
+
+.ui-zip:before {
+    content: $ui-zip;
+}
+

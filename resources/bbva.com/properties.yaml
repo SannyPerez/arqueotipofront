@@ -1,0 +1,10 @@
+session:
+  fellows:
+  groups:
+
+soyo:
+  roles:
+
+connector_uris: s, gnameindexer
+s: https://gapis.bbva.com/techbeat
+gnameindexer: https://gapis.bbva.com/gnameindexer

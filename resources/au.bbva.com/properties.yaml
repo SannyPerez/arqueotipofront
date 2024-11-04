@@ -1,0 +1,10 @@
+session:
+  fellows:
+  groups:
+
+soyo:
+  roles:
+
+connector_uris: s, gnameindexer
+s: https://au-bbva-gateway.appspot.com/au-bbva-techbeat
+gnameindexer: https://au-bbva-gateway.appspot.com/gnameindexer

@@ -1,0 +1,31 @@
+@import './normalize.css';
+@import './base.css';
+
+/*.row {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 15px;
+}*/
+
+a {
+  text-decoration: none;
+  color: var(--primary-blue-color);
+  transition: 0.2s;
+  font-weight: 500;
+}
+
+.text-weight-light {
+  font-weight: 300;
+}
+
+.text-weight-regular {
+  font-weight: 400;
+}
+
+.text-weight-medium {
+  font-weight: 600;
+}
+
+.text-weight-bold {
+  font-weight: 900;
+}

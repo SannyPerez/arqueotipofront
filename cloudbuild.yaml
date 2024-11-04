@@ -1,0 +1,72 @@
+steps:
+- name: 'google/cloud-sdk:slim'
+  id: 'Get pip.conf file'
+  entrypoint: 'bash'
+  args: [
+    '-c',
+    'gcloud secrets versions access ${_PIP_CONF_SECRET_VERSION} --secret=${_PIP_CONF_SECRET_NAME} --project=${_PIP_CONF_SECRET_PROJECT} > /workspace/pip.conf'
+  ]
+
+- name: 'python:3.11-slim'
+  id: 'Install private dependencies'
+  entrypoint: 'bash'
+  args: [
+    '-c',
+    'export PIP_CONFIG_FILE=/workspace/pip.conf
+     && pip install -r requirements-private.txt -t lib --platform manylinux2014_x86_64 --only-binary=:all:
+     && rm /workspace/pip.conf'
+  ]
+
+- name: 'google/cloud-sdk:slim'
+  id: 'Get .npmrc file'
+  entrypoint: 'bash'
+  args: [
+    '-c',
+    'gcloud secrets versions access ${_NPMRC_SECRET_VERSION} --secret=${_NPMRC_SECRET_NAME} --project=${_NPMRC_SECRET_PROJECT} > /workspace/.npmrc'
+  ]
+
+- name: 'node:18'
+  id: 'Install front dependencies'
+  entrypoint: 'npm'
+  args: ['install']
+  dir: 'webapp'
+
+- name: 'node:18'
+  id: 'Build webapp'
+  entrypoint: 'npm'
+  args: ['run', 'build']
+  dir: 'webapp'
+
+- name: 'google/cloud-sdk:slim'
+  id: 'Deploy GAE Application'
+  script: |
+    #!/usr/bin/env bash
+    make cloud-deploy env=$BBVA_GAE_ENV hash=$SHORT_SHA
+  env:
+    - 'BBVA_GAE_ENV=${_BBVA_GAE_ENV}'
+    - 'SHORT_SHA=$SHORT_SHA'
+
+- name: 'google/cloud-sdk:slim'
+  id: 'Promote Version'
+  script: |
+    #!/usr/bin/env bash
+    if [ "$BBVA_GAE_ENV" == "dev" ] || [ "$BBVA_GAE_ENV" == "au" ]
+    then
+        make promote-version hash=$SHORT_SHA service-name=$SERVICE_NAME
+    else
+        echo No Promoting
+    fi
+  env:
+    - 'SHORT_SHA=$SHORT_SHA'
+    - 'SERVICE_NAME=default'
+    - 'BBVA_GAE_ENV=${_BBVA_GAE_ENV}'
+
+substitutions:
+  _PIP_CONF_SECRET_NAME: 'pip-conf-vdc'
+  _PIP_CONF_SECRET_VERSION: 'latest'
+  _PIP_CONF_SECRET_PROJECT: 'bbva-devtools-gcp'
+  _NPMRC_SECRET_NAME: 'npmrc-vdc'
+  _NPMRC_SECRET_VERSION: 'latest'
+  _NPMRC_SECRET_PROJECT: 'bbva-devtools-gcp'
+
+logsBucket: 'gs://$PROJECT_ID-cloudbuild-logs'

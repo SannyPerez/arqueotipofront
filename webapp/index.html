@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0" />-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title><%- title %></title>
+    <style >
+      * {
+          -webkit-touch-callout: none; /* iOS Safari */
+        }
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+    <!-- built files will be auto injected -->
+    <script type="text/javascript">
+    <% if (isDev) { %>
+    sessionStorage.setItem('userSession', JSON.stringify({
+      "userId": "000000000000000000000",
+      "nickname": "Jane Doe",
+      "firstName": "Jane",
+      "lastName": "Doe",
+      "email": "jane.doe@dev.bbva.com",
+      "domain": "dev.bbva.com",
+      "locale": "en_US",
+      "locales": [
+        "en_US"
+      ],
+      "timeZone": "Europe/Madrid",
+      "administrator": false,
+      "defLanguage": "en",
+      "functionalCode": "XXX",
+      "country": "ESPAÑA",
+      "countryCode": "ESP",
+      "companyCode": "0001",
+      "ous": [
+        {
+          "ouCode": "00000063",
+          "ouDescription": "ENGINEERING"
+        },
+        {
+          "ouCode": "00034609",
+          "ouDescription": "ARCHITECTURE"
+        },
+        {
+          "ouCode": "00044281",
+          "ouDescription": "PUBLIC CLOUD&PROC STRAT&GOVERN"
+        },
+        {
+          "ouCode": "00044290",
+          "ouDescription": "PUBLIC CLOUD & SAAS- CCOE GCP"
+        },
+        {
+          "ouCode": "00039800",
+          "ouDescription": "GOOGLE CLOUD EN BBVA"
+        }
+      ],
+      "employeeId": "UR00000",
+      "companyName": "BBVA",
+      "company": "BBVA",
+      "funtionalChargeDescription": "Front Developer",
+      "sIsEmployee": "N",
+      "sFirstSurname": "Doe",
+      "hasPhoto": false,
+      "largeEmployeeId": "00000000000",
+      "globalRange": " ",
+      "workplaceDescription": "UBICACIÓN INSTALACIONES AJENAS",
+      "workplaceCode": "00010000",
+      "workplaceLatitude": "0",
+      "workplaceLongitude": "0",
+      "costCenterCode": "0000",
+      "costCenterDescription": "XXX",
+      "phoneNumber": " ",
+      "mobilePhoneNumber": " ",
+      "coorporatePhoneNumber": " ",
+      "coorporateMobilePhoneNumber": " ",
+      "department": "BBVA",
+      "userPreferences": {
+        "user": "jane.doe@dev.bbva.com",
+        "language": "en_US",
+        "updateDate": 1484121183133
+      },
+      "floorDescription": " ",
+      "tipoContrato": " ",
+      "empresaEmpleado": "000",
+      "tipoBuzon": "Usuario",
+      "tipoLicencia": "Workspace Enterprise Plus",
+      "userType": "personal_account"
+    }));
+    sessionStorage.setItem('env', 'dev');
+    <% } else { %>
+    sessionStorage.setItem('userSession', '{{ session | tojson | safe }}');
+    sessionStorage.setItem('env', {{ environment | tojson | safe }});
+    <% } %>
+    </script>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+#Byte-compiled
+*.py[cod]
+
+# Built documentation
+docs/_build/
+
+#Distribution / packaging
+lib/
+
+# IDEs
+.eclipse/
+.idea/
+.vscode
+**/*.iml
+
+# Virtual environment
+venv/
+
+# Instance configuration
+instance/
+
+# Packaged web.
+public/*
+
+# Mac
+.DS_Store
+
+# Node modules.
+node_modules/
+webapp/node_modules/
+webapp/package-lock.json/
+
+/npm-debug.log
+/yarn.lock
+/package-lock.json
+/yarn-error.log
+/.directory
+
+webapp/tests/coverage/
+
+coverage-reports
+.coverage
+
+webapp/package-lock.json
